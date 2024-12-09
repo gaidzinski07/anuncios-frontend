@@ -1,0 +1,82 @@
+<mat-card>
+    <form [formGroup]="form" class="form-cadastro">
+        <mat-card-title>
+            Cadastre-se!
+        </mat-card-title>
+        <mat-card-content>
+            <table class="campos-cadastro" cellspacing="0">
+                <tr>
+                    <td>
+                        <mat-form-field color="primary" class="campo-cadastro">
+                            <input matInput placeholder="Nome completo" formControlName="nome">
+                            <mat-error *ngIf="form.controls['nome'].invalid">
+                                Insira um nome válido!
+                            </mat-error>
+                        </mat-form-field>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <mat-form-field color="primary" class="campo-cadastro">
+                            <input matInput placeholder="Email UFF" formControlName="email">
+                            <mat-error *ngIf="form.controls['email'].invalid">
+                                Insira um email UFF válido!
+                            </mat-error>
+                        </mat-form-field>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <mat-form-field color="primary" class="campo-cadastro">
+                            <input matInput placeholder="Celular (Whatsapp)" formControlName="celular">
+                            <mat-error *ngIf="form.controls['celular'].invalid">
+                                Insira um número de celular válido!
+                            </mat-error>
+                        </mat-form-field>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <mat-form-field color="primary" class="campo-cadastro">
+                            <input matInput type="{{this.visibility? 'text' : 'password'}}" placeholder="Senha" formControlName="senha">
+                            <mat-error *ngIf="form.controls['senha'].invalid">
+                                Insira um telefone válido!
+                            </mat-error>
+                            <button
+                            matSuffix
+                            mat-icon-button
+                            (click)="changeVisibility()">
+                            <mat-icon>
+                                {{visibilityIcon}}
+                            </mat-icon>
+                            </button>
+                        </mat-form-field>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <mat-form-field color="primary" class="campo-cadastro">
+                            <input matInput type="{{this.visibility? 'text' : 'password'}}" placeholder="Confirmar senha" formControlName="confirmaSenha">
+                            <mat-error *ngIf="form.controls['confirmaSenha'].invalid">
+                                A confirmação de senha deve ser igual a senha!
+                            </mat-error>
+                            <button
+                            matSuffix
+                            mat-icon-button
+                            (click)="changeVisibility()">
+                            <mat-icon>
+                                {{visibilityIcon}}
+                            </mat-icon>
+                            </button>
+                        </mat-form-field>
+                    </td>
+                </tr>
+                </table>
+        </mat-card-content>
+        <mat-card-actions>
+            <button type="submit" mat-raised-button color="primary">
+                Cadastrar
+            </button>
+        </mat-card-actions>
+    </form>
+</mat-card>
