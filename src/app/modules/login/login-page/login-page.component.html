@@ -1,0 +1,40 @@
+<mat-card>
+    <mat-card-title>Login</mat-card-title>
+    <form [formGroup]="form" (ngSubmit)="submit()" class="form-login">
+        <mat-card-content>
+            <table class="campos-login" cellspacing="0">
+                <tr>
+                    <td>
+                        <mat-form-field color="primary" class="campo-login">
+                            <input matInput placeholder="Email UFF" formControlName="email">
+                            <mat-error *ngIf="form.controls['email'].invalid">
+                                Insira um email UFF válido!
+                            </mat-error>
+                        </mat-form-field>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <mat-form-field color="primary" class="campo-login">
+                            <input type="{{this.visibility? 'text' : 'password'}}" matInput placeholder="Senha" formControlName="senha">
+                            <button
+                            matSuffix
+                            mat-icon-button
+                            (click)="changeVisibility()">
+                            <mat-icon>
+                                {{visibilityIcon}}
+                            </mat-icon>
+                            </button>
+                            <mat-error *ngIf="form.controls['senha'].invalid">
+                                A senha é obrigatória!
+                            </mat-error>
+                        </mat-form-field>
+                    </td>
+                </tr>
+            </table>
+        </mat-card-content>
+        <mat-card-actions>
+            <button type="submit" mat-raised-button color="primary">Login</button>
+        </mat-card-actions>
+    </form>
+</mat-card>

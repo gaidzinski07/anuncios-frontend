@@ -1,0 +1,38 @@
+:host {
+    display: flex;
+    justify-content: center;
+    margin: 100px 0px;
+  }
+
+  mat-card-title,
+  mat-card-content,
+  mat-card-actions {
+    display: flex;
+    justify-content: center;
+  }
+  mat-card{
+    min-width: 120px !important;
+    max-width: 500px !important;
+    width: 30%;
+  }
+
+  .form-cadastro {
+    width: 100%;
+  }
+  
+  .campo-cadastro {
+    width: 100%;
+  }
+
+  .full-width {
+    width: 100%;
+  }
+  
+  td {
+    padding-right: 8px;
+  }
+
+  .campos-login{
+    min-width: 100px;
+    width: 70%;
+  }
