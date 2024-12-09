@@ -1,6 +1,15 @@
+<mat-drawer-container class="example-container" autosize>
+  <mat-drawer #drawer class="example-sidenav" mode="side">
+    <p>Auto-resizing sidenav</p>
+  </mat-drawer>
+</mat-drawer-container>
+
 <mat-toolbar color="primary">
     <mat-toolbar-row>
-      <span>Anuncia UFF</span>
+      <button mat-icon-button (click)="drawer.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <span><img src="../../../../assets/img/logo_branca.png" style="height: 50px;"></span>
       <span class="example-spacer"></span>
       <mat-icon class="example-icon" aria-hidden="false" aria-label="Example user verified icon">verified_user</mat-icon>
     </mat-toolbar-row>
