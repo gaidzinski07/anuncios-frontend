@@ -10,6 +10,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { UsuarioRoutingModule } from './usuario-routing.module';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -27,7 +28,9 @@ import { UsuarioRoutingModule } from './usuario-routing.module';
     MatButtonModule,
     MatDividerModule,
     MatProgressBarModule,
-    MatIconModule
-  ]
+    MatIconModule,
+    HttpClientModule
+  ],
+  providers: []
 })
 export class UsuarioModule { }

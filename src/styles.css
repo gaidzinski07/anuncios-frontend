@@ -2,3 +2,15 @@
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 html, body { height: 100%; background-color: lightgray;}
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.anuncios-snackbar {
+    .mat-simple-snackbar{
+      span {
+        color: white;
+        font-weight: 400;
+      }
+  
+      .mat-simple-snackbar-action button{
+        color:white;
+      }
+  }
+  }

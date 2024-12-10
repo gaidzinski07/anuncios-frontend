@@ -7,6 +7,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
 import { LoginModule } from './modules/login/login.module';
 import { PageElemetsModule } from "./modules/page-elemets/page-elemets.module";
+import { HttpClientModule } from '@angular/common/http';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { PageElemetsModule } from "./modules/page-elemets/page-elemets.module";
     AppRoutingModule,
     BrowserAnimationsModule,
     LoginModule,
-    PageElemetsModule
+    PageElemetsModule,
+    HttpClientModule,
+    MatSnackBarModule
 ],
   providers: [],
   bootstrap: [AppComponent]

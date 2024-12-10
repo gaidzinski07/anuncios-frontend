@@ -1,5 +1,5 @@
 <mat-card>
-    <form [formGroup]="form" class="form-cadastro">
+    <form [formGroup]="form" class="form-cadastro" (ngSubmit)="save()">
         <mat-card-title>
             Cadastre-se!
         </mat-card-title>
@@ -40,7 +40,7 @@
                         <mat-form-field color="primary" class="campo-cadastro">
                             <input matInput type="{{this.visibility? 'text' : 'password'}}" placeholder="Senha" formControlName="senha">
                             <mat-error *ngIf="form.controls['senha'].invalid">
-                                Insira um telefone válido!
+                                Insira uma senha válida!
                             </mat-error>
                             <button
                             matSuffix
