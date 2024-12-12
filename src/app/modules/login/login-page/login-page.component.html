@@ -34,7 +34,10 @@
             </table>
         </mat-card-content>
         <mat-card-actions>
-            <button type="submit" mat-raised-button color="primary">Login</button>
+            <button type="submit" mat-raised-button color="primary" [disabled]="logging">Login</button>
         </mat-card-actions>
     </form>
+    <mat-card-footer>
+        <mat-progress-bar *ngIf="logging" mode="indeterminate"></mat-progress-bar>
+    </mat-card-footer>
 </mat-card>

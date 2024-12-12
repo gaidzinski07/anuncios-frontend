@@ -11,6 +11,11 @@ const routes: Routes = [
     path: 'usuario',
     loadChildren: ()=>import('./modules/usuario/usuario.module').then(m=>m.UsuarioModule),
     canActivate: []
+  },
+  {
+    path: 'anuncio',
+    loadChildren: ()=>import('./modules/anuncio/anuncio.module').then(m=>m.AnuncioModule),
+    canActivate: []
   }
 ];
 

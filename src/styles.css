@@ -14,3 +14,10 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
       }
   }
   }
+  .siageo-snackbar.error {
+    background: indigo;
+  }
+  
+  .siageo-snackbar.success {
+    background: red;
+  }
