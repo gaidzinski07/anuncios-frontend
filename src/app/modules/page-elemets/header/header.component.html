@@ -1,16 +1,28 @@
-<mat-drawer-container class="example-container" autosize>
-  <mat-drawer #drawer class="example-sidenav" mode="side">
-    <p>Auto-resizing sidenav</p>
-  </mat-drawer>
-</mat-drawer-container>
-
-<mat-toolbar color="primary">
+<mat-toolbar color="primary" style = "display: flex;">
     <mat-toolbar-row>
-      <button mat-icon-button (click)="drawer.toggle()">
-        <mat-icon>menu</mat-icon>
-      </button>
-      <span><img src="../../../../assets/img/logo_branca.png" style="height: 50px;"></span>
-      <span class="example-spacer"></span>
-      <mat-icon class="example-icon" aria-hidden="false" aria-label="Example user verified icon">verified_user</mat-icon>
+      <table class="row-column">
+          <tr class="row-column">
+            <td  class="left-column">
+              <button mat-icon-button (click)="toggleSidebar.emit()">
+                <mat-icon>menu</mat-icon>
+              </button>
+              <span><img src="../../../../assets/img/logo_branca.png" style="height: 50px;"></span>
+              <!--<span class="example-spacer"></span>-->
+            </td>
+            <td class="center-column">
+              <div class="input-search">
+                <mat-form-field class="mat-input-search" appearance="legacy" [floatLabel]="'never'"> 
+                  <input matInput placeholder="Buscar itens ou serviços" style="color: black">
+                  <mat-icon matSuffix (click)="search()" class="icone-clicavel">search</mat-icon>
+                </mat-form-field>
+              </div>
+            </td>
+            <td class="right-column">
+              <button mat-icon-button>
+                <mat-icon>logout</mat-icon>
+              </button>
+            </td>
+          </tr>
+      </table>
     </mat-toolbar-row>
   </mat-toolbar>

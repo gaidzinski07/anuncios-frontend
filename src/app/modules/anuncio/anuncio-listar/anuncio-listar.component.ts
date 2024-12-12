@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { AnuncioConsumer } from 'src/app/core/consumers/anuncio.consumer';
 import { Anuncio } from 'src/app/core/model/anuncio';
 import { Usuario } from 'src/app/core/model/usuario';
@@ -9,7 +9,8 @@ const usuario2 = new Usuario(null, 'Pablo Vegetti', 'pedrinhogamer@id.uff.br', '
 @Component({
   selector: 'app-anuncio-listar',
   templateUrl: './anuncio-listar.component.html',
-  styleUrls: ['./anuncio-listar.component.css']
+  styleUrls: ['./anuncio-listar.component.css'],
+  encapsulation: ViewEncapsulation.Emulated
 })
 export class AnuncioListarComponent implements OnInit {
 

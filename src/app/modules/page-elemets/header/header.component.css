@@ -4,3 +4,54 @@
   .example-spacer {
     flex: 1 1 auto;
   }
+
+.row-column{
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.left-column{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 20%;
+}
+
+.center-column{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60%;
+}
+
+.right-column{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 20%;
+}
+.input-search{
+  width: 400px;
+  display: flex;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 80%);
+  border-radius: 50px;
+  height: 50px;
+  align-items: center;
+}
+
+.mat-input-search{
+  width: 95%;
+  color: #676767;
+  font-size: 15px;
+  margin-top: 10px;
+}
+
+.icone-clicavel{
+  cursor: pointer;
+}
+
+:host ::ng-deep .mat-form-field-appearance-legacy .mat-form-field-underline {
+  height: 0px !important;
+}
