@@ -1,2 +1,5 @@
-<app-header></app-header>
-<router-outlet></router-outlet>
+<app-header (toggleSidebar)="drawer.toggle()"></app-header>
+<app-navigation-bar #drawer>
+  <router-outlet></router-outlet>
+</app-navigation-bar>
+

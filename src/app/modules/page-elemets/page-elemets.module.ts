@@ -5,20 +5,29 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
+import { NavigationBarComponent } from './navigation-bar/navigation-bar.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatListModule } from '@angular/material/list';
 
 @NgModule({
   declarations: [
-    HeaderComponent
+    HeaderComponent,
+    NavigationBarComponent
   ],
   imports: [
     CommonModule,
     MatToolbarModule,
     MatIconModule,
     MatButtonModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatListModule
   ],
   exports: [
-    HeaderComponent
+    HeaderComponent,
+    NavigationBarComponent
   ]
 })
 export class PageElemetsModule { }

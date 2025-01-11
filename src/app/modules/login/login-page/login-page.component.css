@@ -13,14 +13,7 @@
   mat-card{
     min-width: 120px !important;
     max-width: 500px !important;
-    width: 30%;
-  }
-
-  .error {
-    padding: 16px;
-    width: 300px;
-    color: white;
-    background-color: red;
+    width: 375px;
   }
 
   .form-login {
@@ -41,5 +34,5 @@
 
   .campos-login{
     min-width: 100px;
-    width: 70%;
+    width: 100%;
   }

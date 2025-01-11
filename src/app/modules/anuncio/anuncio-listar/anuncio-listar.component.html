@@ -1,0 +1,40 @@
+<div class="card-crud">
+    <mat-card-title class ="card-title">
+        Resultado da busca
+    </mat-card-title>
+    <mat-card *ngFor="let anuncio of anuncios" class="example-card">
+        <mat-card-title-group>
+            <mat-card-title><a href="#">{{anuncio.titulo}}</a></mat-card-title>
+            <mat-card-subtitle>
+                <table>
+                    <tr>
+                        <!--Dono do anúncio-->
+                        <td>
+                            <mat-icon>person</mat-icon>
+                        </td>
+                        <td>
+                            {{anuncio.usuario?.nome}}
+                        </td>
+                        <!--Valor do anúncio-->
+                        <td>
+                            <mat-icon>paid</mat-icon>
+                        </td>
+                        <td>
+                            {{anuncio.preco}}
+                        </td>
+                        <!--Localização do anúncio-->
+                        <td>
+                            <mat-icon>place</mat-icon>
+                        </td>
+                        <td>
+                            {{anuncio.endereco}}
+                        </td>
+                    </tr>
+                </table>
+            </mat-card-subtitle>
+        </mat-card-title-group>
+        <mat-card-content>
+            {{anuncio.descricao}}
+        </mat-card-content>
+        </mat-card>
+</div>

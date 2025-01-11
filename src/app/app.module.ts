@@ -9,6 +9,10 @@ import { LoginModule } from './modules/login/login.module';
 import { PageElemetsModule } from "./modules/page-elemets/page-elemets.module";
 import { HttpClientModule } from '@angular/common/http';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatIconModule } from '@angular/material/icon';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatListModule } from '@angular/material/list';
 
 @NgModule({
   declarations: [
@@ -22,7 +26,11 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     LoginModule,
     PageElemetsModule,
     HttpClientModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatToolbarModule,
+    MatListModule
 ],
   providers: [],
   bootstrap: [AppComponent]

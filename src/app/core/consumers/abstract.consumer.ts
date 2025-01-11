@@ -54,7 +54,7 @@ export abstract class AbstractConsumer<T> {
     return this.http.get<Array<T>>(url, {withCredentials: true});
   }
 
-  public post(data: T, endpoint?: string): Observable<T> {
+  public post(data: T | any, endpoint?: string): Observable<T> {
     const url = this.addEndpoint(endpoint!);
 
     return this.http.post<T>(url, data, {withCredentials: true});
