@@ -1,0 +1,88 @@
+<mat-card>
+    <form [formGroup]="form" class="form-cadastro" (ngSubmit)="save()">
+        <mat-card-title>
+            Criar Anúncio
+        </mat-card-title>
+        <mat-card-content>
+            <table class="campos-cadastro" cellspacing="0">
+                <tr>
+                    <td>
+                        <mat-form-field color="primary" class="campo-cadastro">
+                            <input matInput placeholder="Título" formControlName="titulo">
+                            <mat-error *ngIf="form.controls['titulo'].invalid">
+                                Insira um título
+                            </mat-error>
+                        </mat-form-field>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <mat-form-field color="primary" class="campo-cadastro">
+                            <input matInput placeholder="Descrição" formControlName="descricao">
+                            <mat-error *ngIf="form.controls['descricao'].invalid">
+                                Insira uma descrição
+                            </mat-error>
+                        </mat-form-field>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <mat-form-field color="primary" class="campo-cadastro">
+                            <input matInput placeholder="Preço" formControlName="preco">
+                            <mat-error *ngIf="form.controls['preco'].invalid">
+                                Insira um preço
+                            </mat-error>
+                        </mat-form-field>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <mat-form-field color="primary" class="campo-cadastro">
+                            <input matInput placeholder="Endereço" formControlName="endereco">
+                            <mat-error *ngIf="form.controls['endereco'].invalid">
+                                Insira um endereço
+                            </mat-error>
+                        </mat-form-field>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <mat-form-field color="primary" class="campo-cadastro">
+                            <mat-label>Categoria</mat-label>
+                            <mat-select matInput placeholder="Categoria" formControlName="categoria">
+                                <mat-option value="Tecnologia">Tecnologia</mat-option>
+                                <mat-option value="Livro">Livro</mat-option>
+                                <mat-option value="Roupa">Roupa</mat-option>
+                                <mat-option value="Móvel">Móvel</mat-option>
+                                <mat-option value="Aula Particular">Aula Particular</mat-option>
+                                <mat-option value="Imóvel">Imóvel</mat-option>
+                            </mat-select>
+                            <mat-error *ngIf="form.controls['categoria'].invalid">
+                                Escolha uma categoria
+                            </mat-error>
+                        </mat-form-field>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <mat-form-field color="primary" class="campo-cadastro">
+                            <mat-label>Tipo do anúncio</mat-label>
+                            <mat-select matInput placeholder="Tipo do anúncio" formControlName="tipoAnuncio">
+                                <mat-option value="Busca">Busca</mat-option>
+                                <mat-option value="Oferta">Oferta</mat-option>
+                            </mat-select>
+                            <mat-error *ngIf="form.controls['tipoAnuncio'].invalid">
+                                Escolha um tipo
+                            </mat-error>
+                        </mat-form-field>
+                    </td>
+                </tr>
+                </table>
+        </mat-card-content>
+        <mat-card-actions>
+            <button type="submit" mat-raised-button color="primary">
+                Cadastrar
+            </button>
+        </mat-card-actions>
+    </form>
+</mat-card>

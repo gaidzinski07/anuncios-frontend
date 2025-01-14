@@ -11,12 +11,16 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { AnuncioRoutingModule } from './anuncio-routing.module';
+import { AnuncioCadastrarComponent } from './anuncio-cadastrar/anuncio-cadastrar.component';
+import { MatSelectModule } from '@angular/material/select';
+
 
 
 
 @NgModule({
   declarations: [
-    AnuncioListarComponent
+    AnuncioListarComponent,
+    AnuncioCadastrarComponent
   ],
   imports: [
     CommonModule,
@@ -29,7 +33,8 @@ import { AnuncioRoutingModule } from './anuncio-routing.module';
     MatDividerModule,
     MatProgressBarModule,
     MatIconModule,
-    HttpClientModule
+    HttpClientModule,
+    MatSelectModule
   ]
 })
 export class AnuncioModule { }

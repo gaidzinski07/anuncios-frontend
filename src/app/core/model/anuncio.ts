@@ -1,16 +1,16 @@
 import { Usuario } from "./usuario";
 
 export class Anuncio{
-    id: string | null;
+    id: number | null;
     titulo: string | null;
     descricao:string | null;
     preco: number | null;
     endereco: string | null;
     categoria: string | null;
     tipoAnuncio: string | null;
-    usuario: Usuario | null;
+    usuario: Usuario | string | null;
 
-    constructor(id: string, titulo: string | null, descricao: string, preco: number, endereco: string, categoria : string, tipoAnuncio: string, usuario: Usuario){
+    constructor(id: number, titulo: string | null, descricao: string, preco: number, endereco: string, categoria : string, tipoAnuncio: string, usuario: Usuario | string){
         this.id = id;
         this.titulo = titulo;
         this.descricao = descricao;
