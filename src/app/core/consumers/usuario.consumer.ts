@@ -16,4 +16,8 @@ export class UsuarioConsumer extends AbstractConsumer<Usuario>{
     login(credenciais: Login): Observable<any>{
         return this.post(credenciais, 'auth');
     }
+
+    get(id: number): Observable<any>{
+        return this.get(id);
+    }
 }
