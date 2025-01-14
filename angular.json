@@ -69,10 +69,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "anuncios-frontend:build:production"
+              "buildTarget": "anuncios-frontend:build:production"
             },
             "development": {
-              "browserTarget": "anuncios-frontend:build:development"
+              "buildTarget": "anuncios-frontend:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -80,7 +80,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "anuncios-frontend:build"
+            "buildTarget": "anuncios-frontend:build"
           }
         },
         "test": {
@@ -104,5 +104,8 @@
       }
     }
   },
-  "defaultProject": "anuncios-frontend"
+  "defaultProject": "anuncios-frontend",
+  "cli": {
+    "analytics": "2456ae86-e63e-43d9-ab89-5798f93e1068"
+  }
 }

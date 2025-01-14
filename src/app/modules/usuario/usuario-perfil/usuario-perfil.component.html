@@ -1,0 +1,46 @@
+<mat-card>
+    <form [formGroup]="form" class="form-perfil" (ngSubmit)="">
+        <mat-card-title>
+            Perfil
+        </mat-card-title>
+        <mat-card-content>
+            <table class="campos-perfil" cellspacing="0">
+                <tr>
+                    <td>
+                        <mat-form-field color="primary" class="campo-perfil">
+                            <input disabled matInput placeholder="Nome completo" formControlName="nome">
+                            <mat-error *ngIf="form.controls['nome'].invalid">
+                                Insira um nome válido!
+                            </mat-error>
+                        </mat-form-field>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <mat-form-field color="primary" class="campo-perfil">
+                            <input disabled matInput placeholder="Email UFF" formControlName="email">
+                            <mat-error *ngIf="form.controls['email'].invalid">
+                                Insira um email UFF válido!
+                            </mat-error>
+                        </mat-form-field>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <mat-form-field color="primary" class="campo-perfil">
+                            <input disabled matInput placeholder="Celular (Whatsapp)" formControlName="celular">
+                            <mat-error *ngIf="form.controls['celular'].invalid">
+                                Insira um número de celular válido!
+                            </mat-error>
+                        </mat-form-field>
+                    </td>
+              
+                </table>
+        </mat-card-content>
+        <mat-card-actions>
+            <button type="submit" mat-raised-button color="primary">
+                Cadastrar
+            </button>
+        </mat-card-actions>
+    </form>
+</mat-card>
