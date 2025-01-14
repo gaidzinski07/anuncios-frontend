@@ -12,6 +12,8 @@ import { MatInputModule } from '@angular/material/input';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { AnuncioRoutingModule } from './anuncio-routing.module';
 import { AnuncioCadastrarComponent } from './anuncio-cadastrar/anuncio-cadastrar.component';
+import { MatSelectModule } from '@angular/material/select';
+
 
 
 
@@ -31,7 +33,8 @@ import { AnuncioCadastrarComponent } from './anuncio-cadastrar/anuncio-cadastrar
     MatDividerModule,
     MatProgressBarModule,
     MatIconModule,
-    HttpClientModule
+    HttpClientModule,
+    MatSelectModule
   ]
 })
 export class AnuncioModule { }
