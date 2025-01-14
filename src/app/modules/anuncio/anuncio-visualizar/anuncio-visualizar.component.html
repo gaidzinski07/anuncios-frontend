@@ -1,0 +1,44 @@
+<div class="card-crud">
+    <mat-card-title class="card-title">
+      Anuncio
+    </mat-card-title>
+  
+    <mat-card class="example-card">
+      <mat-card-title-group>
+        <mat-card-title><a href="#">{{anuncio?.titulo}}</a></mat-card-title>
+        <mat-card-subtitle>
+          <table>
+            <tr>
+              <td>
+                <mat-icon>person</mat-icon>
+              </td>
+              <td>
+                {{anuncio?.usuario?.nome}}
+              </td>
+              <td>
+                <mat-icon>paid</mat-icon>
+              </td>
+              <td>
+                {{anuncio?.preco}}
+              </td>
+              <td>
+                <mat-icon>place</mat-icon>
+              </td>
+              <td>
+                {{anuncio?.endereco}}
+              </td>
+            </tr>
+          </table>
+        </mat-card-subtitle>
+      </mat-card-title-group>
+      <mat-card-content>
+        {{anuncio?.descricao}}
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-raised-button color="primary">
+          <mat-icon>local_offer</mat-icon>
+          Oferta
+        </button>
+      </mat-card-actions>
+    </mat-card>
+</div>

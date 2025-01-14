@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AnuncioListarComponent } from './anuncio-listar/anuncio-listar.component';
+import { AnuncioVisualizarComponent } from './anuncio-visualizar/anuncio-visualizar.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
@@ -16,7 +17,8 @@ import { AnuncioRoutingModule } from './anuncio-routing.module';
 
 @NgModule({
   declarations: [
-    AnuncioListarComponent
+    AnuncioListarComponent,
+    AnuncioVisualizarComponent
   ],
   imports: [
     CommonModule,
