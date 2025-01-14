@@ -11,12 +11,14 @@ import { MatInputModule } from '@angular/material/input';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { UsuarioRoutingModule } from './usuario-routing.module';
 import { HttpClientModule } from '@angular/common/http';
+import { UsuarioPerfilComponent } from './usuario-perfil/usuario-perfil.component';
 
 
 
 @NgModule({
   declarations: [
-    UsuarioCadastroComponent
+    UsuarioCadastroComponent,
+    UsuarioPerfilComponent
   ],
   imports: [
     CommonModule,
